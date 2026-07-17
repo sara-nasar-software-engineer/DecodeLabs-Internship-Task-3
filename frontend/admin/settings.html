@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Urban Sips Admin Settings</title>
+  <meta name="description" content="Admin settings for Urban Sips." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="admin-sidebar-header">
+        <div class="admin-brand">
+          <img src="../assets/icons/logo.png" alt="Urban Sips logo" class="logo">
+          <div>
+            <h1>Urban Sips</h1>
+            <p>Admin Panel</p>
+          </div>
+        </div>
+        <button id="adminSidebarClose" class="admin-sidebar-close" type="button" aria-label="Close navigation">×</button>
+      </div>
+
+      <nav class="admin-nav" aria-label="Admin navigation">
+        <a href="/admin/dashboard.html">Dashboard</a>
+        <a href="/admin/menu.html">Menu Management</a>
+        <a href="/admin/orders.html">Orders</a>
+        <a href="/admin/settings.html" class="active">Settings</a>
+        <a href="/index.html">Back to Site</a>
+      </nav>
+
+      <button id="logoutBtnTop" class="btn btn-secondary admin-logout-btn" type="button">Logout</button>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <h1>Settings</h1>
+          <p>Update store details and admin preferences.</p>
+        </div>
+        <div class="topbar-actions">
+          <button id="adminNavToggle" class="nav-toggle" aria-controls="adminSidebar" aria-expanded="false" type="button">
+            <img src="../assets/icons/menu.svg" alt="">
+          </button>
+          <span class="admin-badge">Admin Access</span>
+        </div>
+      </div>
+
+      <section class="admin-section">
+        <div class="admin-header">
+          <h2>Store Information</h2>
+          <p>Basic business details shown on the public website.</p>
+        </div>
+
+        <div class="settings-card">
+          <p><strong>Store Name:</strong> Urban Sips</p>
+          <p><strong>Branch:</strong> Lahore, Punjab</p>
+          <p><strong>Status:</strong> Open</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/admin.js" defer></script>
+</body>
+</html>

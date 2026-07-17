@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cart — Urban Sips</title>
+  <meta name="description" content="Shopping cart for Urban Sips." />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Urban Sips home">
+        <img src="assets/icons/logo.png" alt="Urban Sips logo" class="logo">
+        <span class="brand-name">Urban Sips</span>
+      </a>
+
+      <div class="header-actions">
+        <button class="nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="assets/icons/menu.svg" alt="">
+        </button>
+
+        <nav id="mainNav" class="main-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="admin/index.html">Admin</a></li>
+          </ul>
+        </nav>
+
+        <button class="cart-btn" id="cartBtn" aria-label="View cart" type="button">
+          <span class="cart-icon" aria-hidden="true">🛒</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Your Cart</h2>
+          <p>Review items in your cart. Update quantities or proceed to checkout.</p>
+        </div>
+
+        <div class="checkout-grid">
+          <div class="card-body cart-panel">
+            <table id="cartTable" class="admin-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Price</th>
+                  <th>Qty</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="cartBody">
+                <tr><td colspan="4">Loading cart...</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <aside class="contact-card">
+            <h3>Summary</h3>
+            <div id="summaryList" class="summary-list"></div>
+            <div class="summary-row">
+              <strong>Total</strong>
+              <strong id="summaryTotal">Rs. 0</strong>
+            </div>
+            <div class="summary-actions">
+              <a href="checkout.html" id="toCheckout" class="btn btn-primary">Proceed to checkout</a>
+              <button id="clearCart" class="btn btn-secondary" type="button">Clear cart</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Urban Sips</span>
+      </div>
+      <div class="footer-meta">
+        <p>© <span id="year"></span> Urban Sips</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cart.js" defer></script>
+</body>
+</html>

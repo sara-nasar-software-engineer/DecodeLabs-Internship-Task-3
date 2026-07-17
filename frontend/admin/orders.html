@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Urban Sips Admin Orders</title>
+  <meta name="description" content="Admin orders view for Urban Sips." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="admin-sidebar-header">
+        <div class="admin-brand">
+          <img src="../assets/icons/logo.png" alt="Urban Sips logo" class="logo">
+          <div>
+            <h1>Urban Sips</h1>
+            <p>Admin Panel</p>
+          </div>
+        </div>
+        <button id="adminSidebarClose" class="admin-sidebar-close" type="button" aria-label="Close navigation">×</button>
+      </div>
+
+      <nav class="admin-nav" aria-label="Admin navigation">
+        <a href="/admin/dashboard.html">Dashboard</a>
+        <a href="/admin/menu.html">Menu Management</a>
+        <a href="/admin/orders.html" class="active">Orders</a>
+        <a href="/admin/settings.html">Settings</a>
+        <a href="/index.html">Back to Site</a>
+      </nav>
+
+      <button id="logoutBtnTop" class="btn btn-secondary admin-logout-btn" type="button">Logout</button>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <h1>Order Tracking</h1>
+          <p>Keep an eye on current orders and update statuses quickly.</p>
+        </div>
+        <div class="topbar-actions">
+          <button id="adminNavToggle" class="nav-toggle" aria-controls="adminSidebar" aria-expanded="false" type="button">
+            <img src="../assets/icons/menu.svg" alt="">
+          </button>
+          <span class="admin-badge">Admin Access</span>
+        </div>
+      </div>
+
+      <section class="admin-section">
+        <div class="admin-header">
+          <h2>Recent Orders</h2>
+          <p>Monitor incoming customer orders and track completion.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Order</th>
+                <th>Items</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTableBody">
+              <tr data-id="101">
+                <td>#101</td>
+                <td>2 Cappuccino, 1 Croissant</td>
+                <td><span class="status pending">Pending</span></td>
+                <td>
+                  <button class="table-btn status-btn" data-status="completed">Mark Done</button>
+                  <button class="table-btn delete-btn" type="button">Delete</button>
+                </td>
+              </tr>
+              <tr data-id="102">
+                <td>#102</td>
+                <td>1 Espresso, 1 Latte</td>
+                <td><span class="status completed">Completed</span></td>
+                <td>
+                  <button class="table-btn status-btn" data-status="pending">Mark Pending</button>
+                  <button class="table-btn delete-btn" type="button">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/admin.js" defer></script>
+</body>
+</html>

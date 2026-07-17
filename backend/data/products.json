@@ -1,0 +1,26 @@
+[
+  {
+    "id": "espresso",
+    "title": "Espresso",
+    "category": "coffee",
+    "price": 350,
+    "description": "Strong, bold, and rich.",
+    "image": "assets/images/coffee-1.jpg"
+  },
+  {
+    "id": "cappuccino",
+    "title": "Cappuccino",
+    "category": "coffee",
+    "price": 450,
+    "description": "Perfectly balanced and creamy.",
+    "image": "assets/images/coffee-2.jpg"
+  },
+  {
+    "id": "croissant",
+    "title": "Butter Croissant",
+    "category": "pastry",
+    "price": 220,
+    "description": "Fresh, flaky, and buttery.",
+    "image": "assets/images/pastry-1.jpg"
+  }
+]

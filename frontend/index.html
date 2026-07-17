@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Urban Sips — Premium Coffee House</title>
+  <meta name="description" content="Urban Sips offers premium coffee, artisan pastries, and a cozy modern atmosphere." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Urban Sips home">
+        <img src="assets/icons/logo.png" alt="Urban Sips logo" class="logo">
+        <span class="brand-name">Urban Sips</span>
+      </a>
+
+      <div class="header-actions">
+        <button class="nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="assets/icons/menu.svg" alt="">
+        </button>
+
+        <nav id="mainNav" class="main-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="admin/index.html">Admin</a></li>
+          </ul>
+        </nav>
+
+        <button class="cart-btn" id="cartBtn" aria-label="View cart">
+          <span class="cart-icon" aria-hidden="true">🛒</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Specialty Coffee • Fresh Pastries • Modern Vibes</p>
+          <h1>Urban Sips — Specialty Coffee & Pastries</h1>
+          <p class="hero-text">Enjoy premium espresso, creamy lattes, and artisan bakes in a warm, stylish space made for everyday coffee lovers.</p>
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary">Explore Menu</a>
+            <a href="#contact" class="btn btn-secondary">Find Us</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="assets/images/hero.jpg" alt="Coffee cup on a table with warm lighting" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Our Menu</h2>
+          <p>Choose from signature drinks and freshly baked treats.</p>
+        </div>
+
+        <div class="filters" role="toolbar" aria-label="Menu filter buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="coffee">Coffee</button>
+          <button class="filter-btn" data-filter="tea">Tea</button>
+          <button class="filter-btn" data-filter="pastry">Pastry</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Why Urban Sips?</h2>
+          <p>Handcrafted drinks, fresh bakery favorites, and a welcoming space built for every coffee moment.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Barista-crafted drinks</h3>
+            <p>Expert espresso, silky lattes, and signature brews made to order.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Freshly baked pastries</h3>
+            <p>Warm croissants, muffins, and sweet treats baked daily.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Cozy, modern space</h3>
+            <p>Relax, work, or catch up with friends in our stylish cafe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt-section">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2>About Urban Sips</h2>
+          <p>We serve specialty coffee with a premium experience. Our cafe blends modern design, comfort, and quality ingredients to create the perfect coffee stop.</p>
+          <ul class="about-list">
+            <li><strong>Hours:</strong> Daily 7:00 AM - 8:00 PM</li>
+            <li><strong>Location:</strong> Lahore, Punjab</li>
+          </ul>
+        </div>
+
+        <div class="about-image">
+          <img src="assets/images/coffee-2.jpg" alt="Stylish cafe interior" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Contact Us</h2>
+          <p>Send a message or visit Urban Sips in person.</p>
+        </div>
+
+        <div class="contact-grid">
+          <form id="contactForm" class="contact-form" novalidate>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required>
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required>
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p id="formMsg" class="form-msg" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-card">
+            <h3>Visit Us</h3>
+            <p>Food Street, Lahore</p>
+            <p>Phone: +92 300 0000000</p>
+            <div class="map-box">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.072086321029!2d74.35482727500164!3d31.530085881371556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919041fce9233f1%3A0xb9cbb5d8b4aea538!2sFood%20Street%2C%20Gawalmandi%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1710000000000"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Urban Sips</span>
+        <p class="footer-copy">Premium coffee house with handcrafted drinks and freshly baked pastries.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-meta">
+        <p>© <span id="year"></span> Urban Sips</p>
+        <p>Food Street, Lahore</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

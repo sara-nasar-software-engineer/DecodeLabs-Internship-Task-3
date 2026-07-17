@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout — Urban Sips</title>
+  <meta name="description" content="Checkout page for Urban Sips." />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Urban Sips home">
+        <img src="assets/icons/logo.png" alt="Urban Sips logo" class="logo">
+        <span class="brand-name">Urban Sips</span>
+      </a>
+
+      <div class="header-actions">
+        <button class="nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="assets/icons/menu.svg" alt="">
+        </button>
+
+        <nav id="mainNav" class="main-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="admin/index.html">Admin</a></li>
+          </ul>
+        </nav>
+
+        <button class="cart-btn" id="cartBtn" aria-label="View cart" type="button">
+          <span class="cart-icon" aria-hidden="true">🛒</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Checkout</h2>
+          <p>Review your order and enter billing details to complete the purchase.</p>
+        </div>
+
+        <div class="checkout-grid">
+          <form id="checkoutForm" class="contact-form checkout-form">
+            <h3>Billing details</h3>
+
+            <label>
+              <span>Full name</span>
+              <input type="text" name="fullName" required>
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required>
+            </label>
+
+            <label>
+              <span>Address</span>
+              <input type="text" name="address" required>
+            </label>
+
+            <div class="checkout-two">
+              <label>
+                <span>City</span>
+                <input type="text" name="city" required>
+              </label>
+              <label>
+                <span>Postal code</span>
+                <input type="text" name="postal" required>
+              </label>
+            </div>
+
+            <h4>Payment</h4>
+            <label>
+              <span>Card number</span>
+              <input type="text" name="card" inputmode="numeric" required placeholder="1234 5678 9012 3456">
+            </label>
+
+            <div class="checkout-three">
+              <label>
+                <span>Expiry</span>
+                <input type="text" name="expiry" placeholder="MM/YY" required>
+              </label>
+              <label>
+                <span>CVV</span>
+                <input type="text" name="cvv" inputmode="numeric" required>
+              </label>
+              <div></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Place order</button>
+          </form>
+
+          <aside class="contact-card checkout-summary">
+            <h3>Order summary</h3>
+            <div id="orderSummary">
+              <p>No items in cart.</p>
+            </div>
+            <div class="summary-row">
+              <strong>Total:</strong>
+              <span id="orderTotal">Rs. 0</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Urban Sips</span>
+        <p class="footer-copy">Premium coffee house with handcrafted drinks and freshly baked pastries.</p>
+      </div>
+      <div class="footer-meta">
+        <p>© <span id="year"></span> Urban Sips</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/checkout.js" defer></script>
+</body>
+</html>

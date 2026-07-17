@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Urban Sips Admin Login</title>
+  <meta name="description" content="Admin login for Urban Sips." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body">
+  <main class="admin-login-page">
+    <section class="admin-login-panel">
+      <div class="admin-login-brand">
+        <img src="../assets/icons/logo.png" alt="Urban Sips logo" class="logo">
+        <div>
+          <h1>Urban Sips Admin</h1>
+          <p>Sign in to manage the dashboard, update the menu, and track orders.</p>
+        </div>
+      </div>
+
+      <div class="login-card">
+        <h2>Admin Login</h2>
+        <p>Only authorized staff may proceed.</p>
+        <form id="adminLoginForm" class="admin-form login-form">
+          <label>
+            <span>Username</span>
+            <input type="text" id="adminUsername" placeholder="admin" required>
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" id="adminPassword" placeholder="••••••••" required>
+          </label>
+          <button class="btn btn-primary" type="submit">Sign In</button>
+          <p class="login-error" id="loginError" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/admin.js" defer></script>
+</body>
+</html>

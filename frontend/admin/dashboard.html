@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Urban Sips Admin Dashboard</title>
+  <meta name="description" content="Admin dashboard overview for Urban Sips." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="admin-sidebar-header">
+        <div class="admin-brand">
+          <img src="../assets/icons/logo.png" alt="Urban Sips logo" class="logo">
+          <div>
+            <h1>Urban Sips</h1>
+            <p>Admin Panel</p>
+          </div>
+        </div>
+        <button id="adminSidebarClose" class="admin-sidebar-close" type="button" aria-label="Close navigation">×</button>
+      </div>
+
+      <nav class="admin-nav" aria-label="Admin navigation">
+        <a href="/admin/dashboard.html" class="active">Dashboard</a>
+        <a href="/admin/menu.html">Menu Management</a>
+        <a href="/admin/orders.html">Orders</a>
+        <a href="/admin/settings.html">Settings</a>
+        <a href="/index.html">Back to Site</a>
+      </nav>
+
+      <button id="logoutBtnTop" class="btn btn-secondary admin-logout-btn" type="button">Logout</button>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <h1>Urban Sips Admin</h1>
+          <p>Welcome back, manager. Review daily performance, update the menu, and keep orders moving smoothly.</p>
+        </div>
+        <div class="topbar-actions">
+          <button id="adminNavToggle" class="nav-toggle" aria-controls="adminSidebar" aria-expanded="false" type="button">
+            <img src="../assets/icons/menu.svg" alt="">
+          </button>
+          <span class="admin-badge">Admin Access</span>
+        </div>
+      </div>
+
+      <section class="admin-section">
+        <div class="admin-header">
+          <h2>Dashboard</h2>
+          <p>Overview of café performance and active content.</p>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <h3 id="dailyOrders">128</h3>
+            <p>Daily Orders</p>
+          </article>
+          <article class="stat-card">
+            <h3 id="menuCount">42</h3>
+            <p>Menu Items</p>
+          </article>
+          <article class="stat-card">
+            <h3>95%</h3>
+            <p>Positive Feedback</p>
+          </article>
+          <article class="stat-card">
+            <h3 id="pendingCount">08</h3>
+            <p>Pending Requests</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/admin.js" defer></script>
+</body>
+</html>
